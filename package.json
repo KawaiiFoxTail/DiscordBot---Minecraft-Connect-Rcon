@@ -1,0 +1,28 @@
+{
+  "name": "discord-bot-ddos-por",
+  "version": "0.0.1",
+  "description": "SRC : PORSERVER",
+  "main": "bot.js",
+  "scripts": {
+    "test": "echo \"Error: no test FUCK\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "cfonts": "^2.8.2",
+    "colors": "^1.4.0",
+    "console-rainbow": "^1.0.0",
+    "console-title": "^1.1.0",
+    "discord.js": "^12.2.0",
+    "minecraft-server-util": "^3.4.4",
+    "moment": "^2.29.1",
+    "moment-duration-format": "^2.3.2",
+    "node-server-screenshot": "^0.2.4",
+    "nodemon": "^2.0.7",
+    "rainbow-console": "0.0.2",
+    "sleep": "^6.2.0",
+    "youtube.get-video-info": "^1.0.2"
+  }
+}
