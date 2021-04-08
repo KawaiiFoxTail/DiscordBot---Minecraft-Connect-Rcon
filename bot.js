@@ -35,7 +35,7 @@ const client = new discord.Client();
 
 
 // Rcon setup
-const rcon = new servermc.RCON('1.1.1.1', { port: 25575, enableSRV: true, timeout: 5000, password: 'password' }); // These are the default options
+const rcon = new servermc.RCON('191.101.185.187', { port: 25575, enableSRV: true, timeout: 5000, password: 'kawaiifoxtailisthebest' }); // These are the default options
 const consolediscord = "serverminecrafttest";
 // Rconsetup
 
@@ -73,6 +73,7 @@ client.on('message', (msg) => {if(msg.content.startsWith(config.prefix + 'wla'))
     const args = msg.content.slice(config.prefix.length).trim().split(/ +/g);
     rcon.connect()
     .then(() => rcon.run(`whitelist add ${args[1]}`))
+    .then(() => rcon.run(`whitelist reload`))
 }})
 // end Whileist 
 // Send Command 2 
