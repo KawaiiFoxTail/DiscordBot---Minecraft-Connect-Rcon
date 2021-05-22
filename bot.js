@@ -113,13 +113,13 @@ client.on('message', (msg) => { if(msg.content.startsWith(config.prefix + 'start
 
     if(args[1] === x) {
         const bat = exec('nimo.bat');
-        //bat.stdout.on('data', (data) => {
-            //console.log(data.toString());
-         // });
+        bat.stdout.on('data', (data) => {
+            console.log(data.toString());
+          });
         
-          //bat.stderr.on('data', (data) => {
-           // console.error(data.toString());
-         // });
+          bat.stderr.on('data', (data) => {
+            console.error(data.toString());
+          });
     } else if(args[1] === y) {
         const bat1 = exec('load.bat');
         bat1.stdout.on('data', (data) => {
@@ -138,22 +138,5 @@ client.on('message', (msg) => { if(msg.content.startsWith(config.prefix + 'start
         const bwt = new discord.MessageEmbed().setTitle('เน็ตเซิฟ 100MB | IP : ').setColor('#5DFF00'); msg.channel.send(bwt)
     }
 }});
-//End Status Server
-client.on('message', (msg) => { if(msg.content.startsWith(config.prefix + 'intro')){
-    const start = new discord.MessageEmbed().setTitle('เปิดเซิฟมายคราฟ ฟรี โดย KaWaii & TkKung & Phawat').setColor('#5DFF00'); msg.channel.send(start);
-}});
-
-client.on('message', (msg) => { if(msg.content.startsWith(config.prefix + 'add'))
-{
-    const args = msg.content.slice(config.prefix.length).trim().split(/ +/g);
-    const start = new discord.MessageEmbed().setTitle(`กำลังติดตั้ง ${args[1]}`).setColor('#5DFF00'); msg.channel.send(start);
-    console.log(`Request Install : ${args[1]} `)
-}});
-// Help Command 1
-// op
-// end op
-// User
-// end User
-//End Discord Discord Console
 client.on('ready', () =>{ console.log('Bot is Ready') });
 client.login(config.token);
