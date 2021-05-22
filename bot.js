@@ -150,20 +150,6 @@ client.on('message', (msg) => { if(msg.content.startsWith(config.prefix + 'add')
     console.log(`Request Install : ${args[1]} `)
 }});
 // Help Command 1
-client.on('message', (msg) => { if(msg.content === `${config.prefix}help`)
-{
-  const helpem = new discord.MessageEmbed().setTitle('คำสั่งทั้งหมด').setFooter('Cr. 𝓞𝓱𝓪𝔂𝓸𝓞𝓷𝓲𝓲𝓒𝓱𝓪𝓷#5480', 'https://i.pinimg.com/originals/5a/62/b6/5a62b68015a37749453049bf6614bbb3.gif').setThumbnail('https://1.bp.blogspot.com/-qjMcFSZPOdE/XSSPVbJcbOI/AAAAAAA1pH8/VeOlq0Zg9vkF21zH1HbwRIXXSxNTCbiXQCLcBGAs/s1600/AW3945234_00.gif').setColor('#FF9E00')
-  .addFields(
-        { name: 'Custom World', value: `${config.prefix}add customworld [server id] ` },
-        { name: 'Plugin', value: `${config.prefix}add  ชื่อplugin [server id] <- ข้อ id ได้ที่ KawaiiFoxTail` },
-        { name: 'Onlinemode', value: `${config.prefix}add true,false [server id] <- ข้อ id ได้ที่ KawaiiFoxTail` },
-        { name: 'Server', value: `${config.prefix}add เซิฟ <-- Spigot, Paper, Vanila,` },
-        { name: 'Ex.', value: `${config.prefix}add customworld, worldedit antixray, false, paper` },
-
-    ); msg.channel.send(helpem);
-  msg.react('✅');
-}});
-
 // op
 // end op
 // User
